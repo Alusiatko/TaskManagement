@@ -1,4 +1,4 @@
-package pl.cg.exercise;
+package pl.cg.model;
 
 import javax.persistence.*;
 
@@ -13,8 +13,6 @@ public class Task {
 
     @Column(name = "task_name", nullable = false, length = 20)
     private String taskName;
-
-
 
     public Task() {
     }

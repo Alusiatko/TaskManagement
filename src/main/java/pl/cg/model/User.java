@@ -1,4 +1,4 @@
-package pl.cg.exercise;
+package pl.cg.model;
 
 import javax.persistence.*;
 import java.util.List;
@@ -16,7 +16,7 @@ public class User {
     private String userName;
 
     @OneToMany(cascade = CascadeType.ALL, targetEntity = Task.class)
-    private List<Integer> tasks;
+    private List<Task> tasks;
 
     public User() {
     }
@@ -42,11 +42,11 @@ public class User {
     }
 
 
-    public List<Integer> getTasks() {
+    public List<Task> getTasks() {
         return tasks;
     }
 
-    public void setTasks(List<Integer> tasks) {
+    public void setTasks(List<Task> tasks) {
         this.tasks = tasks;
     }
 }
